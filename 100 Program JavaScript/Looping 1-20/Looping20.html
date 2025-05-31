@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping 20 M Rasyid Al Zhafran</title>
+</head>
+
+<body>
+  <pre id="loop"></pre>
+  <label for="number">Masukkan Nilai Perkalian:</label>
+  <input type="number" id="number">
+  <button onclick="buattabel()">Buat Tabel</button>
+
+  <pre id="tabel"></pre>
+
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t Looping 20\n" + "=".repeat(45) + "\n";
+    function buattabel() {
+      let x = parseInt(document.getElementById("number").value);
+      let tabel = "    *";
+
+      for (let a = 1; a <= x; a++) {
+        tabel += " ".repeat(5 - a.toString().length) + a;
+      }
+      tabel += "\n";
+
+      for (let a = 1; a <= x; a++) {
+        tabel += " ".repeat(5 - a.toString().length) + a;
+
+        for (let b = 1; b <= x; b++) {
+          let hasil = a * b;
+          tabel += " ".repeat(5 - hasil.toString().length) + hasil;
+        }
+        tabel += "\n";
+      }
+
+      document.getElementById("tabel").textContent = tabel;
+    }
+    document.getElementById('loop').textContent = hasil;
+  </script>
+</body>
+
+</html>

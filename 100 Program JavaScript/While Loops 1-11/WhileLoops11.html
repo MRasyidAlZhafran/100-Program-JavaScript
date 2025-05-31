@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>While Loops 11 M Rasyid Al Zhafran</title>
+</head>
+<body>
+
+  <pre id="wloops"></pre>
+  
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t While Loops 11\n" + "=".repeat(45) + "\n";
+
+    let angka1 = 1;
+    while (angka1 < 11) {
+      let angka2 = 1;
+      while (angka2 < 11) {
+      hasil += angka1 + " * " + angka2 + " = " + (angka1 * angka2) + "\n"
+      angka2++;
+      }
+      hasil += "\n"
+      angka1++;
+    }
+
+    document.getElementById('wloops').textContent = hasil;
+  </script>
+</body>
+</html>

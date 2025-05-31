@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Perkalian</title>
+</head>
+<body>
+    <h2>Tabel Perkalian</h2>
+    <label for="number">Masukkan Jumlah Perkalian:</label>
+    <input type="number" id="number">
+    <button onclick="generateTable()">Buat Tabel</button>
+    
+    <pre id="output"></pre>
+
+    <script>
+        function generateTable() {
+            let x = document.getElementById("number").value;
+            let output = "";
+            
+            for (let a = 1; a <= 10; a++) {
+                output += x + " x " + a + " = " + (x * a) + "\n";
+            }
+
+            document.getElementById("output").textContent = output;
+        }
+    </script>
+</body>
+</html>

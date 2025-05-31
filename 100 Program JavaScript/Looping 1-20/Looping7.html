@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping 7 M Rasyid Al Zhafran</title>
+</head>
+<body>
+  <pre id="loop"></pre>
+
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t Looping 7\n" + "=".repeat(45) + "\n";
+
+    let jumlah = 0
+    for (let c = 1; c < 6; c += 2) {
+      if (c < 5) {
+        hasil += c + " + "
+      } else {
+        hasil += c + " = "
+      }
+
+      jumlah += c
+    }
+
+    hasil += jumlah
+
+    document.getElementById('loop').textContent = hasil;
+  </script>
+</body>
+</html>

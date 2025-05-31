@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping 19 M Rasyid Al Zhafran</title>
+</head>
+<body>
+  <pre id="loop"></pre>
+  <label for="jumlah">Masukkan jumlah nilainya:</label>
+  <input type="number" id="jumlah">
+  <button onclick="hitung()">=</button>
+
+  <div id="output"></div>
+
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t Looping 19\n" + "=".repeat(45) + "\n";
+    function hitung() {
+      let jumlah = parseInt(document.getElementById("jumlah").value);
+      let total = 0;
+      let nilaiArray = [];
+
+      for (let i = 0; i < jumlah; i++) {
+        let nilai = parseInt(prompt("Masukkan Nilainya:"));
+        nilaiArray.push(nilai);
+        total += nilai;
+      }
+
+      let rata_rata = total / jumlah;
+
+      document.getElementById("output").innerHTML =
+        "<p>Jumlah Nilai Adalah: " + total + "</p>" +
+        "<p>Rata-Rata Nilainya Adalah: " + rata_rata.toFixed(2) + "</p>";
+    }
+    document.getElementById('loop').textContent = hasil;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping 17 M Rasyid Al Zhafran</title>
+</head>
+<body>
+  <pre id="loop"></pre>
+
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t Looping 17\n" + "=".repeat(45) + "\n";
+    
+    let g = ['a','b','c','d','e']
+    for (let c = 0; c < 5; c++) {
+      for (let y = 0; y < 5; y++) {
+        hasil += g[c] + " "
+      }
+      hasil += "\n"
+    }
+
+    document.getElementById('loop').textContent = hasil;
+  </script>
+</body>
+</html>

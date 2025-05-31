@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List 2 M Rasyid Al Zhafran</title>
+</head>
+<body>
+  <script>
+    console.log("Translate Hari");
+
+    const listHari = ["Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu", "Minggu"];
+    const english = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+    listHari.forEach((x, i) => {
+      console.log(`${i + 1}. ${x}`);
+    });
+
+    const hari = parseInt(prompt("Masukkan Nomor Hari : "));
+    
+    console.log("")
+    if (hari >= 1 && hari <= 7) {
+      console.log(listHari[hari - 1]);
+      console.log(english[hari - 1]);
+    } else {
+      console.log("Inputan Hari Terlalu Jauh!");
+    }
+  </script>
+</body>
+</html>

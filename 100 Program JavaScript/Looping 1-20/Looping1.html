@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Looping 1 M Rasyid Al Zhafran</title>
+</head>
+<body>
+  <pre id="loop"></pre>
+
+  <script>
+    let hasil = "=".repeat(45) + "\n\t\t Looping 1\n" + "=".repeat(45) + "\n";
+
+    for (let c = 0; c < 4; c++) {
+      hasil += " Cerdas";
+    }
+
+    document.getElementById('loop').textContent = hasil;
+  </script>
+</body>
+</html>
